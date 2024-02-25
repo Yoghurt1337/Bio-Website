@@ -1,0 +1,228 @@
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+  background-color: black; /* Set background color to black */
+}
+
+/* Define custom cursor */
+.custom-cursor {
+  cursor: url('./assets/cursor/pointer.png'), auto !important;
+}
+
+/* Terminal styles */
+#terminal {
+  position: fixed; /* Fixed position to keep it always visible */
+  top: 50px; /* Adjust initial top position as needed */
+  left: 50px; /* Adjust initial left position as needed */
+  width: 600px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  background-color: #1e1e1e; /* Terminal background color */
+  color: #ffffff; /* Terminal text color */
+  border-radius: 10px; /* Rounded corners */
+  z-index: 1000; /* Ensure it's above other elements */
+  border: 2px solid #4d4d4d; /* Terminal border color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Terminal shadow */
+}
+
+/* Terminal header styles */
+#terminal-header {
+  background-color: #2d2d2d; /* Header background color */
+  border-top-left-radius: 10px; /* Rounded corners for top left */
+  border-top-right-radius: 10px; /* Rounded corners for top right */
+  padding: 10px; /* Add padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-start; /* Align buttons to the left */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Terminal header hover effect */
+#terminal-header:hover {
+  background-color: #333333; /* Darken header background on hover */
+}
+
+/* Terminal buttons styles */
+#terminal-buttons {
+  display: flex; /* Use flexbox for layout */
+  gap: 10px; /* Add gap between buttons */
+}
+
+/* Individual terminal button styles */
+.terminal-button {
+  width: 15px; /* Adjust width as needed */
+  height: 15px; /* Adjust height as needed */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer; /* Set cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Terminal button hover effect */
+.terminal-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+}
+
+/* Close button styles */
+#close-button {
+  background-color: #FF5F57; /* Close button color */
+}
+
+/* Minimize button styles */
+#minimize-button {
+  background-color: #FFBD2E; /* Minimize button color */
+}
+
+/* Maximize button styles */
+#maximize-button {
+  background-color: #28CA42; /* Maximize button color */
+}
+
+/* Terminal content styles */
+#terminal-content {
+  padding: 20px; /* Add padding */
+  height: calc(100% - 40px); /* Adjust for header height and padding */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  user-select: none; /* Disable text selection */
+}
+
+/* Terminal text styles */
+#terminal-text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px; /* Terminal text size */
+  line-height: 1.5; /* Line height */
+  overflow: hidden; /* Hide overflow */
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+/* Video background styles */
+#video-background {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
+  z-index: -1; /* Behind other content */
+}
+
+/* Scan lines effect */
+#video-background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 2px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Video styles */
+#myVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire viewport while maintaining aspect ratio */
+  z-index: 0; /* Behind other content */
+}
+
+/* Positioning classes */
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+/* Blurred box styles */
+#blurred-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%; /* Adjust width as needed */
+  height: 30%; /* Adjust height as needed */
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  border-radius: 20px; /* Rounded corners */
+  border: 2px solid rgba(255, 255, 255, 0); /* Dark border with transparency */
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.5); /* Slightly blurred shadow */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 999; /* Above other content */
+  display: none; /* Initially hidden */
+  padding: 20px; /* Add padding */
+  text-align: center; /* Center text horizontally */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Blurred box hover effect */
+#blurred-box:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent background on hover */
+}
+
+/* Profile picture styles */
+#blurred-box img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 10%; /* Rounded corners */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* Links styles */
+.links {
+  display: flex;
+  justify-content: center; /* Center links horizontally */
+}
+
+.links a {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  margin: 0 10px; /* Adjust margin as needed */
+  color: #ffffff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+/* Link hover effect */
+.links a:hover {
+  color: #ff00ff; /* Change color on hover */
+}
+
+.links a i {
+  margin-right: 5px; /* Add space between icon and text */
+  font-size: 24px; /* Bigger font size for icons */
+}
+
+/* Hover styles for links */
+.links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* User Description styles */
+.user-description {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.user-description p {
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Add padding */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* User description hover effect */
+.user-description:hover p {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+}
