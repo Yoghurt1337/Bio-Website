@@ -52,3 +52,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to customiz
 - [ ] Add phone support
 - [ ] fix system detection
 - [ ] Fix the links size / position in middle according to the display size
+
+I'm gonna fix it when I have time
+but if you know what are you doing then you can fix it for yourself 
