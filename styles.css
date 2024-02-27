@@ -27,6 +27,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Terminal shadow */
 }
 
+@media screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens, such as phones */
+  #terminal {
+      max-width: 90%; /* Increase width for smaller screens */
+  }
+}
 /* Terminal header styles */
 #terminal-header {
   background-color: #2d2d2d; /* Header background color */
@@ -153,7 +159,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%; /* Adjust width as needed */
-  height: 30%; /* Adjust height as needed */
+  height: 40%; /* Adjust height as needed */
   background-color: rgba(255, 255, 255, 0); /* Transparent background */
   border-radius: 20px; /* Rounded corners */
   border: 2px solid rgba(255, 255, 255, 0); /* Dark border with transparency */
@@ -181,32 +187,37 @@ body {
 
 /* Links styles */
 .links {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center; /* Center links horizontally */
+  justify-content: center;
+  z-index: 1001; /* Ensure icons are above the blurred box */
 }
 
 .links a {
   display: flex;
-  align-items: center; /* Align icon and text vertically */
-  margin: 0 10px; /* Adjust margin as needed */
-  color: #ffffff; /* Link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Smooth transition for color */
+  align-items: center;
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 /* Link hover effect */
 .links a:hover {
-  color: #ff00ff; /* Change color on hover */
+  color: #ff00ff;
 }
 
 .links a i {
-  margin-right: 5px; /* Add space between icon and text */
-  font-size: 24px; /* Bigger font size for icons */
+  margin-right: 5px;
+  font-size: 24px;
 }
 
 /* Hover styles for links */
 .links a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
 /* User Description styles */
