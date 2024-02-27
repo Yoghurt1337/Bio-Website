@@ -52,3 +52,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to customiz
 - [X] Add phone support
 - [X] fix system detection (Need to be updated asap) (quick fix applyed)
 - [X] Fix the links size / position in middle according to the display size
+- [ ] Make Another Theme
