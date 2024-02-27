@@ -48,10 +48,7 @@ This project is licensed under the [MIT License](LICENSE). Feel free to customiz
 ![image](https://github.com/Yoghurt1337/Selfhosted-Bio-Template/assets/78077899/5302bd00-e2e0-482e-ab76-40e6106f560a)
 
 ![image](https://github.com/Yoghurt1337/Selfhosted-Bio-Template/assets/78077899/7f3430c9-00dc-4693-a1eb-0cff9a816d63)
-###To-Do
+## To-Do
 - [X] Add phone support
 - [X] fix system detection (Need to be updated asap) (quick fix applyed)
 - [X] Fix the links size / position in middle according to the display size
-
-I'm gonna fix it when I have time
-but if you know what are you doing then you can fix it for yourself 
