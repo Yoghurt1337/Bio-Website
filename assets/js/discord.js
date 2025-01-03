@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const userId = ""; // Replace with your hardcoded user ID
+    const userId = "879145354573000714"; // Replace with your hardcoded user ID
     const apiUrl = `https://discord-lookup-api-alpha.vercel.app/v1/user/${userId}`;
 
     // Elements
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.avatar_decoration && data.avatar_decoration.asset) {
                 const asset = data.avatar_decoration.asset;
                 const frameUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${asset}.png`;
-                console.log("Avatar Frame URL:", frameUrl); // Debug: log frame URL
+             // console.log("Avatar Frame URL:", frameUrl); // Debug: log frame URL
                 avatarFrame.src = frameUrl;
                 avatarFrame.style.display = 'block'; // Show the avatar frame
             } else {
