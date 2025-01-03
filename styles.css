@@ -179,9 +179,9 @@ body {
 
 /* Profile picture styles */
 #blurred-box img {
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  border-radius: 10%; /* Rounded corners */
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%; /* Rounded corners */
   margin-bottom: 20px; /* Adjust margin as needed */
 }
 
@@ -236,4 +236,16 @@ body {
 /* User description hover effect */
 .user-description:hover p {
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+}
+
+#avatar-frame {
+  position: absolute; /* Overlay on top of the profile picture */
+  top: 15%; /* Adjust to move it higher (e.g., reduce from 50% to 40%) */
+  left: 50%; /* Center horizontally within #blurred-box */
+  transform: translate(-50%, -50%); /* Adjust for proper centering */
+  width: 15% ; /* Slightly larger than the profile picture */
+  height: 20%; /* Slightly larger than the profile picture */
+  z-index: 1000; /* Ensure it is above the profile picture */
+  pointer-events: none; /* Prevent interaction with the frame */
+  display: none; /* Initially hidden */
 }
